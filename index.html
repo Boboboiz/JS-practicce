@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Practice- class 15</h1>
+    <form action="">
+      <input type="text" id="point1" placeholder="điểm môn Toán" />
+      <input type="text" id="point2" placeholder="điểm môn Lý" />
+      <input type="text" id="point3" placeholder="điểm môn Hóa" /><br />
+      <input
+        type="text"
+        id="pointArea"
+        placeholder="khu vực ưu tiên (A, B , C) (nhập X nếu không thuộc khu vực ưu tiên)"
+        style="width: 500px"
+      /><br />
+      <input
+        type="text"
+        id="pointPrioriti"
+        placeholder="đối tượng ưu tiên (nhập 0 nếu không thuộc đối tượng ưu tiên)"
+        style="width:500px ;"
+      /><br />
+      <input type="text" id="standardPoint" placeholder="điểm chuẩn" />
+
+      <button type="button" onclick="handleResult()">Kết quả</button>
+    </form>
+    <span id="result"></span>
 
 
+    <hr />
+    
+    <form action="">
+        <input type="text" id="amount" placeholder="nhập vào lượng điện tiêu thụ" />
+        <button type="button" onclick="handleCal()">Tính tiền</button>
+    </form>
+    <span id="totalPrice"></span>
 
 
-
+    <hr />
 
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
