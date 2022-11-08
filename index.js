@@ -119,9 +119,22 @@ function handleCalTax() {
   document.getElementById("tax").innerHTML = result;
 }
 
-
 // 4
 
-function handleCalPrice (){
-  
+function handleCalPrice() {
+  var checkUser1 = document.getElementById("selection1");
+  var checkUser2 = document.getElementById("selection2");
+  var quanStad = document.getElementById("quantOfStaChanel").value;
+  var quantLux = document.getElementById("quantOfLuxChanel").value;
+  var type = 0;
+
+  if (checkUser1.checked === true) {
+    type = 1;
+  } else if (checkUser2.checked === true) {
+    type = 2;
+  } else {
+    alert("Vui lòng chọn loại hình khách hàng");
+  };
+
+
 }
