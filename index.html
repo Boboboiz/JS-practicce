@@ -50,6 +50,21 @@
       <button type="button" onclick="handleCalTax()">Total tax</button>
     </form>
     <span id="tax"></span>
+
+
+    <hr />
+
+    <form action="">
+      <input type="radio" id="selection1" />
+      <label for="selection2"> Cá nhân</label>
+      <input type="radio" id="selection1" />
+      <label for="selection1"> Doanh nghiệp</label> <br />
+      
+      <input type="text"  id="quantOfStaChanel" placeholder="Số kênh tiêu chuẩn" />
+      <input type="text" id="quantOfLuxChanel"  placeholder="Số kênh cao cấp" />
+      <button type="button" onclick="handleCalPrice()">Tiền cần thanh toán </button>
+    </form>
+    <span id="totalPrice"></span>
     <script src="./index.js"></script>
   </body>
 </html>

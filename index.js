@@ -118,3 +118,10 @@ function handleCalTax() {
     "Tổng thuế thu nhập của ông/bà " + userName + " là:" + tax + " triệu";
   document.getElementById("tax").innerHTML = result;
 }
+
+
+// 4
+
+function handleCalPrice (){
+  
+}
