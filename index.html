@@ -61,17 +61,20 @@
     <hr />
 
     <form action="">
-      <input type="radio" id="selection1" />
-      <label for="selection2"> Cá nhân</label>
-      <input type="radio" id="selection1" />
-      <label for="selection1"> Doanh nghiệp</label> <br />
+      <input type="radio" name="selector" id="individual"/>
+      <label for="individual">Cá nhân</label>
+      <input type="radio" name="selector" id="company"/>
+      <label for="company">Doanh nghiệp</label>
+      <button type="button" onclick="handleSelec()"> Chọn</button>
+<br />
     </form>
     <form action="">
-      <input type="text"  id="quantOfStaChanel" placeholder="Số kênh tiêu chuẩn" />
+      <input type="text"  id="quantOfStaChanel" placeholder="Số kênh tiêu chuẩn" class="display"  />
       <input type="text" id="quantOfLuxChanel"  placeholder="Số kênh cao cấp" />
       <button type="button" onclick="handleCalPrice()">Tiền cần thanh toán </button>
     </form>
-    <span id="totalPrice"></span>
+    <span id="totalPrice2"></span>
+
     <script src="./index.js"></script>
   </body>
 </html>

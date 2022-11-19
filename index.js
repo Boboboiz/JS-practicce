@@ -122,11 +122,12 @@ function handleCalTax() {
 // 4
 
 function handleCalPrice() {
-  var checkUser1 = document.getElementById("selection1");
-  var checkUser2 = document.getElementById("selection2");
-  var quanStad = document.getElementById("quantOfStaChanel").value;
-  var quantLux = document.getElementById("quantOfLuxChanel").value;
+  var checkUser1 = document.getElementById("individual");
+  var checkUser2 = document.getElementById("company");
+  var quanStad = +document.getElementById("quantOfStaChanel").value;
+  var quantLux = +document.getElementById("quantOfLuxChanel").value;
   var type = 0;
+  var totalPrice = 0;
 
   if (checkUser1.checked === true) {
     type = 1;
@@ -134,7 +135,27 @@ function handleCalPrice() {
     type = 2;
   } else {
     alert("Vui lòng chọn loại hình khách hàng");
-  };
+  }
 
+  if (type === 1) {
+    totalPrice = 4.5 + 20.5 + quantLux * 7.5;
+  }
+  if (type === 2) {
+    if (quanStad <= 10) totalPrice = 15 + 75 + 50 * quantLux;
+  } else if (quanStad > 10) {
+    totalPrice = 15 + 75 + 5 * quanStad + 50 * quantLux;
+  }
 
+  document.getElementById("totalPrice2").innerHTML = totalPrice;
+}
+function handleSelec() {
+  var checkUser1 = document.getElementById("individual");
+  var checkUser2 = document.getElementById("company");
+  var quanStad = +document.getElementById("quantOfStaChanel").value;
+
+  if (checkUser2.checked === true) {
+    document.getElementById("quantOfStaChanel").classList.remove("display");
+  } else if (checkUser1.checked === true) {
+    document.getElementById("quantOfStaChanel").classList.add("display");
+  }
 }
